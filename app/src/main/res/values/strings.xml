@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="big_description">Bohemia (lat. homeland of Boi) (Present Day Czechia) was a kingdom that was in the Eastern part of the Holy Roman Empire. In the 15th century, Lands of the Bohemian Crown consisted of Kingdom of Bohemia, Margraviate of Moravia, Duchies of Silesia, Upper Lusatia, Lower Lusatia, Upper Palatinate and Margraviate of Brandenburg and were ruled by the King of Bohemia.
+
+It is a landlocked kingdom located southeast of Germany, southwest of Poland, and north of Austria and Slovakia.
+
+Bohemia together with Moravia and part of Silesia forms the modern day country of Czechia.
+
+The events of Kingdom Come: Deliverance take place in a small portion of this land. The accessible area of the game is located in regions between Sasau and Rattay, southeast of Prague. </string>
+    <string name="site1_title">Castle of Skalitz</string>
+    <string name="site1_summary">Castle Skalicky in Silver Skalitz was the seat of Sir Radzig Kobyla, the Hetman of King Wenceslas IV of Bohemia. The main gate of the keep was situated near the forge of the village.</string>
+    <string name="site2_title">Henry\'s house</string>
+    <string name="site2_summary">The House of Henry and his parents was situated in Silver Skalitz next to Martin\'s forge and near the castle of Sir Radzig Kobyla. It has a prominent linden tree in front of the house and a small garden on the side. </string>
+    <string name="site1_description">test</string>
+    <string name="site2_description">test</string>
+    <string name="site3_title">Deutsch\'s house</string>
+    <string name="site3_summary">The house of the Deutsch, his son and his wife was situated near the tavern in the village of Silver Skalitz. The building however was destroyed during the attack of King Sigismund of Luxembourg. </string>
+    <string name="site3_description">test</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/site_item"
+    android:background="@drawable/rounded_bg"
+    android:backgroundTint="#D3D3D3"
+    android:layout_marginBottom="16dp"
+    android:layout_marginTop="16dp"
+    android:descendantFocusability="blocksDescendants">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/site_img"
+        android:src="@drawable/castle_of_skalitz"
+        android:background="@drawable/rounded_corners"
+        android:scaleType="centerCrop"
+        android:clipToOutline="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/site_title"
+        android:text="Castle of Skalitz"
+        android:layout_below="@id/site_img"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:paddingRight="4dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="12dp"/>
+    <TextView
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/site_summary"
+        android:text="Castle Skalicky in Silver Skalitz was the seat of Sir Radzig Kobyla, the Hetman of King Wenceslas IV of Bohemia. The main gate of the keep was situated near the forge of the village. "
+        android:layout_below="@id/site_title"
+        android:paddingLeft="10dp"
+        android:layout_marginBottom="6dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/site_summary"
+        android:layout_centerHorizontal="true">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favorite"
+            android:id="@+id/site_fav_btn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share"
+            android:id="@+id/site_share_btn"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+</RelativeLayout>
