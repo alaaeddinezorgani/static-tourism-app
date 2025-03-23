@@ -5,8 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -41,7 +39,7 @@
                 android:id="@+id/big_title"
                 android:textStyle="bold"
                 android:textSize="35dp"
-                android:text="Bohemia"
+                android:text="@string/big_title"
                 android:layout_below="@id/image_slider"
                 android:layout_marginLeft="20dp"
                 android:padding="5dp"
