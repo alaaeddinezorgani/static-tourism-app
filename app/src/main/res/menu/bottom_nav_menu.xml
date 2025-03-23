@@ -8,9 +8,5 @@
         android:id="@+id/locations_nav_item"
         android:title="Locations"
         android:icon="@drawable/baseline_beach_access_24"/>
-    <item
-        android:id="@+id/bookmarks_nav_item"
-        android:title="Bookmarks"
-        android:icon="@drawable/baseline_bookmark_24"/>
 
 </menu>

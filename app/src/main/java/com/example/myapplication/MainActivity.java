@@ -38,9 +38,15 @@ public class MainActivity extends AppCompatActivity{
                 replaceFragment(new HomeFragment());
             }else if(item.getItemId()==R.id.locations_nav_item){
                 replaceFragment(new LocationsFragment());
-            }else if(item.getItemId()==R.id.bookmarks_nav_item){
+            }
+
+            /*
+            else if(item.getItemId()==R.id.bookmarks_nav_item){
+
                 replaceFragment(new BookmarksFragment());
             }
+            */
+
 
             return true;
         });
