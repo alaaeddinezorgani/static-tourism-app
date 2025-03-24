@@ -38,6 +38,11 @@ public class SiteAdapter extends BaseAdapter {
         return position;
     }
 
+
+    public void setFilteredList(ArrayList<Site> filteredList){
+        sites = filteredList;
+        notifyDataSetChanged();
+    }
     @Override
     public View getView(int position, View view, ViewGroup parent) {
         Site s = sites.get(position);

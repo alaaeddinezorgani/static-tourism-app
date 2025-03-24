@@ -15,8 +15,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -101,6 +103,32 @@ public class LocationsFragment extends Fragment {
 
             }
         });
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
 
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterList(newText);
+                return false;
+            }
+        });
+
+    }
+
+    private void filterList(String text) {
+        ArrayList<Site> filteredList = new ArrayList<Site>();
+        for(Site site : sites){
+            if(getString(site.getNameRes()).toLowerCase().contains(text.toLowerCase())){
+                filteredList.add(site);
+            }
+        }
+        if(filteredList.isEmpty())
+            Toast.makeText(getContext(), "No data found", Toast.LENGTH_SHORT).show();
+        else{
+            adapter.setFilteredList(filteredList);
+        }
     }
 }
