@@ -47,7 +47,7 @@ public class LocationsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         sites = new ArrayList<>();
-        sites.add(new Site(R.string.site1_title, R.string.site1_summary, R.string.site1_description, R.drawable.castle_of_skalitz, "", ""));
+        sites.add(new Site(R.string.site1_title, R.string.site1_summary, R.string.site1_description, R.drawable.castle_of_skalitz, "https://www.gnu.org/", "1234567890"));
         sites.add(new Site(R.string.site2_title, R.string.site2_summary, R.string.site2_description, R.drawable.henrys_house, "", ""));
         sites.add(new Site(R.string.site3_title, R.string.site3_summary, R.string.site3_description, R.drawable.deutschs_house, "", ""));
         sites.add(new Site(R.string.site4_title, R.string.site4_summary, R.string.site4_description, R.drawable.castle_of_skalitz, "", ""));

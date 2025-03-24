@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -9,18 +10,25 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import android.Manifest;
+import android.widget.Toast;
+
 
 import com.example.myapplication.databinding.ActivityMainBinding;
 
 
 public class SiteActivity extends AppCompatActivity implements View.OnClickListener {
+    private static final int REQUEST_CALL_PERMISSION = 1;
     TextView tv1, tv2;
     Button btn1, btn2, btn3;
     ImageView img;
@@ -61,6 +69,13 @@ public class SiteActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v){
         if(v.getId()==R.id.call_btn){
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE)
+                    != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL_PERMISSION);
+            } else {
+                makePhoneCall();
+            }
             Uri r1 = Uri.parse("tel:" + phone);
             Intent i1 = new Intent(Intent.ACTION_CALL, r1);
             startActivity(i1);
@@ -73,6 +88,24 @@ public class SiteActivity extends AppCompatActivity implements View.OnClickListe
             Uri websiteUri = Uri.parse(website);
             Intent i3 = new Intent(Intent.ACTION_VIEW, websiteUri);
             startActivity(i3);
+        }
+    }
+    private void makePhoneCall() {
+        Uri callUri = Uri.parse("tel:" + phone);
+        Intent callIntent = new Intent(Intent.ACTION_CALL, callUri);
+        startActivity(callIntent);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+                                           @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == REQUEST_CALL_PERMISSION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                makePhoneCall();
+            } else {
+                Toast.makeText(this, "Call Permission Denied", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
