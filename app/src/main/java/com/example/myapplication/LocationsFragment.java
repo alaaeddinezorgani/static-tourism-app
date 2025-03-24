@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import java.util.ArrayList;
 
@@ -25,7 +26,7 @@ import java.util.ArrayList;
 public class LocationsFragment extends Fragment {
     ArrayList<Site> sites;
     SiteAdapter adapter;
-
+    SearchView searchView;
     public LocationsFragment() {
 
     }
@@ -47,7 +48,13 @@ public class LocationsFragment extends Fragment {
         sites.add(new Site(R.string.site1_title, R.string.site1_summary, R.string.site1_description, R.drawable.castle_of_skalitz, "", ""));
         sites.add(new Site(R.string.site2_title, R.string.site2_summary, R.string.site2_description, R.drawable.henrys_house, "", ""));
         sites.add(new Site(R.string.site3_title, R.string.site3_summary, R.string.site3_description, R.drawable.deutschs_house, "", ""));
-
+        sites.add(new Site(R.string.site4_title, R.string.site4_summary, R.string.site4_description, R.drawable.castle_of_skalitz, "", ""));
+        sites.add(new Site(R.string.site5_title, R.string.site5_summary, R.string.site5_description, R.drawable.castle_of_skalitz, "", ""));
+        sites.add(new Site(R.string.site6_title, R.string.site6_summary, R.string.site6_description, R.drawable.castle_of_skalitz, "", ""));
+        sites.add(new Site(R.string.site7_title, R.string.site7_summary, R.string.site7_description, R.drawable.castle_of_skalitz, "", ""));
+        sites.add(new Site(R.string.site8_title, R.string.site8_summary, R.string.site8_description, R.drawable.castle_of_skalitz, "", ""));
+        sites.add(new Site(R.string.site9_title, R.string.site9_summary, R.string.site9_description, R.drawable.castle_of_skalitz, "", ""));
+        sites.add(new Site(R.string.site10_title, R.string.site10_summary, R.string.site10_description, R.drawable.castle_of_skalitz, "", ""));
     }
 
     @Override
@@ -74,7 +81,8 @@ public class LocationsFragment extends Fragment {
                 return insets;
             });
         }
-
+        searchView = view.findViewById(R.id.search_view);
+        searchView.clearFocus();
         ListView lv = view.findViewById(R.id.site_list);
         adapter = new SiteAdapter(getActivity(), sites);
         lv.setAdapter(adapter);

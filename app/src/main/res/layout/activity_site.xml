@@ -1,71 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <ImageView
-        android:id="@+id/image_slider"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:src="@drawable/henrys_house"
-        android:scaleType="centerCrop"
-        android:adjustViewBounds="true"
-        />
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+        <ImageView
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/henrys_house"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/big_title"
-        android:textStyle="bold"
-        android:textSize="35dp"
-        android:text="Bohemia"
-        android:layout_below="@id/image_slider"
-        android:layout_marginLeft="20dp"
-        android:padding="5dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/sf_pro_text_black" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/big_title"
-        android:text="@string/big_description"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/big_description"
-        android:fontFamily="@font/sf_pro"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/big_title"
+            android:textStyle="bold"
+            android:textSize="35dp"
+            android:text="Bohemia"
+            android:layout_below="@id/image_slider"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/sf_pro_text_black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/big_title"
+            android:text="@string/big_description"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/big_description"
+            android:fontFamily="@font/sf_pro"/>
 
-   <RelativeLayout
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_below="@id/big_description"
-       android:layout_centerHorizontal="true">
-       <Button
+       <RelativeLayout
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
-           android:text="Call"
-           android:id="@+id/call_btn"
-           android:layout_margin="10dp"
-           android:fontFamily="@font/sf_pro_text_bold"/>
-       <Button
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Message"
-           android:id="@+id/message_btn"
-           android:layout_toRightOf="@id/call_btn"
-           android:layout_margin="10dp"
-           android:fontFamily="@font/sf_pro_text_bold"/>
-       <Button
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Visit Website"
-           android:id="@+id/website_btn"
-           android:layout_toRightOf="@id/message_btn"
-           android:layout_margin="10dp"
-           android:fontFamily="@font/sf_pro_text_bold"/>
+           android:layout_below="@id/big_description"
+           android:layout_centerHorizontal="true">
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Call"
+               android:id="@+id/call_btn"
+               android:layout_margin="10dp"
+               android:fontFamily="@font/sf_pro_text_bold"/>
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Message"
+               android:id="@+id/message_btn"
+               android:layout_toRightOf="@id/call_btn"
+               android:layout_margin="10dp"
+               android:fontFamily="@font/sf_pro_text_bold"/>
+           <Button
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Visit Website"
+               android:id="@+id/website_btn"
+               android:layout_toRightOf="@id/message_btn"
+               android:layout_margin="10dp"
+               android:fontFamily="@font/sf_pro_text_bold"/>
 
-   </RelativeLayout>
+       </RelativeLayout>
 
-</RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
