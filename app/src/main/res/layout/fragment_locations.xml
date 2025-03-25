@@ -23,6 +23,8 @@
             android:paddingTop="8dp"
             android:paddingBottom="8dp"
             android:layout_below="@id/search_view"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="6dp"
             />
     <View
         android:layout_width="match_parent"
