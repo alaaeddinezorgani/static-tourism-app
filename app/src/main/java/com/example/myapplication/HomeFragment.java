@@ -12,14 +12,13 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.fragment.app.Fragment;
 
-import com.example.myapplication.R;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
 public class HomeFragment extends Fragment {
     private SliderView sliderView;
-    int[] images = {R.drawable.talmberg, R.drawable.talmberg_concept_art, R.drawable.talmberg_concept_art_1};
+    int[] images = {R.drawable.st_petersburg_1, R.drawable.st_petersburg_2, R.drawable.st_petersburg_3};
 
     @Nullable
     @Override

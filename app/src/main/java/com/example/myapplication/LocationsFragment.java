@@ -47,16 +47,16 @@ public class LocationsFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         sites = new ArrayList<>();
-        sites.add(new Site(R.string.site1_title, R.string.site1_summary, R.string.site1_description, R.drawable.castle_of_skalitz, "https://www.gnu.org/", "1234567890"));
-        sites.add(new Site(R.string.site2_title, R.string.site2_summary, R.string.site2_description, R.drawable.henrys_house, "", ""));
-        sites.add(new Site(R.string.site3_title, R.string.site3_summary, R.string.site3_description, R.drawable.deutschs_house, "", ""));
-        sites.add(new Site(R.string.site4_title, R.string.site4_summary, R.string.site4_description, R.drawable.castle_of_skalitz, "", ""));
-        sites.add(new Site(R.string.site5_title, R.string.site5_summary, R.string.site5_description, R.drawable.castle_of_skalitz, "", ""));
-        sites.add(new Site(R.string.site6_title, R.string.site6_summary, R.string.site6_description, R.drawable.castle_of_skalitz, "", ""));
-        sites.add(new Site(R.string.site7_title, R.string.site7_summary, R.string.site7_description, R.drawable.castle_of_skalitz, "", ""));
-        sites.add(new Site(R.string.site8_title, R.string.site8_summary, R.string.site8_description, R.drawable.castle_of_skalitz, "", ""));
-        sites.add(new Site(R.string.site9_title, R.string.site9_summary, R.string.site9_description, R.drawable.castle_of_skalitz, "", ""));
-        sites.add(new Site(R.string.site10_title, R.string.site10_summary, R.string.site10_description, R.drawable.castle_of_skalitz, "", ""));
+        sites.add(new Site(R.string.site1_title, R.string.site1_summary, R.string.site1_description, R.drawable.the_church_of_the_savior, "https://cathedral.ru/ru", "+7 812 315-16-36"));
+        sites.add(new Site(R.string.site2_title, R.string.site2_summary, R.string.site2_description, R.drawable.winter_palace, "https://www.hermitagemuseum.org/", "+7 812 710-90-79"));
+        sites.add(new Site(R.string.site3_title, R.string.site3_summary, R.string.site3_description, R.drawable.yelagin_palace, "https://elaginpark.org/en/", "+7 812 430-09-11"));
+        sites.add(new Site(R.string.site4_title, R.string.site4_summary, R.string.site4_description, R.drawable.peter_paul, "https://www.spbmuseum.ru/themuseum/museum_complex/peterpaul_fortress/", "+7 812 230-64-31"));
+        sites.add(new Site(R.string.site5_title, R.string.site5_summary, R.string.site5_description, R.drawable.catherine_palace, "https://www.tzar.ru/objects/ekaterininsky", "+7 812 415-76-67"));
+        sites.add(new Site(R.string.site6_title, R.string.site6_summary, R.string.site6_description, R.drawable.saint_isaac, "https://cathedral.ru/ru", "+7 812 315-97-32"));
+        sites.add(new Site(R.string.site7_title, R.string.site7_summary, R.string.site7_description, R.drawable.russian_museum, "https://www.rusmuseum.ru/", "+7 812 595-42-48"));
+        sites.add(new Site(R.string.site8_title, R.string.site8_summary, R.string.site8_description, R.drawable.kazan_cathedral, "http://kazansky-spb.ru/", "+7 981 930-08-01"));
+        sites.add(new Site(R.string.site9_title, R.string.site9_summary, R.string.site9_description, R.drawable.mariinsky_theatre, "https://www.mariinsky.ru/en/", "+7 812 326-41-41"));
+        sites.add(new Site(R.string.site10_title, R.string.site10_summary, R.string.site10_description, R.drawable.peterhof_palace, "https://peterhofmuseum.ru/", "+7 812 313-23-14"));
     }
 
     @Override

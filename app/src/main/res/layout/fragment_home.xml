@@ -2,10 +2,10 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <RelativeLayout
@@ -70,20 +70,17 @@
                 android:visibility="invisible"
                 android:layout_below="@id/credits" />
 
-
         </RelativeLayout>
-
     </ScrollView>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:alpha="@dimen/material_emphasis_high_type"
-        android:src="@drawable/translate"
-        app:layout_anchorGravity="bottom|end"
-        app:useCompatPadding="false"
         android:contentDescription="Search"
-        android:translationX="320dp"
-        android:translationY="600dp"/>
+        android:src="@drawable/translate"
+        android:translationX="300dp"
+        android:translationY="600dp"
+        app:useCompatPadding="false" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
