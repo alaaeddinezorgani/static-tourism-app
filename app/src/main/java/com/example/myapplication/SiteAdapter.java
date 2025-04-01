@@ -16,6 +16,7 @@ import com.example.myapplication.Site;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class SiteAdapter extends BaseAdapter {
     ArrayList<Site> sites;
@@ -64,12 +65,20 @@ public class SiteAdapter extends BaseAdapter {
         shareButton.setOnClickListener(v -> {
             Intent shareIntent = new Intent(Intent.ACTION_SEND);
             shareIntent.setType("text/plain");
+
             String name = context.getString(s.getNameRes());
             String website = s.getWebsite();
-            String shareText = "Check out this amazing location: " + name + " on " + website;
-            shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+            String shareText;
 
+            if (Locale.getDefault().getLanguage().equals("ar")) {
+                shareText = "اكتشف : " + name + " على " + website;
+            } else {
+                shareText = "Check out this amazing location: " + name + " on " + website;
+            }
+
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
             Intent chooser = Intent.createChooser(shareIntent, "Share via");
+
             if (shareIntent.resolveActivity(context.getPackageManager()) != null) {
                 context.startActivity(chooser);
             }
