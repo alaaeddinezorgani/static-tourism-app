@@ -9,7 +9,8 @@
     android:backgroundTint="#D3D3D3"
     android:layout_marginBottom="16dp"
     android:layout_marginTop="16dp"
-    android:descendantFocusability="blocksDescendants">
+    android:descendantFocusability="blocksDescendants"
+    android:layoutDirection="locale">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -26,10 +27,10 @@
         android:layout_below="@id/site_img"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:paddingRight="4dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="4dp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        android:paddingLeft="12dp"
         android:fontFamily="@font/sf_pro_text_black"
         android:textDirection="locale"/>
     <TextView
