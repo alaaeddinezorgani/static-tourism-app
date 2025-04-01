@@ -25,6 +25,7 @@
         android:layout_below="@id/search_view"
         android:divider="@android:color/transparent"
         android:dividerHeight="6dp"
+        android:textDirection="locale"
         />
     <View
         android:layout_width="match_parent"

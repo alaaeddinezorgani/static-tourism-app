@@ -30,7 +30,8 @@
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
         android:paddingLeft="12dp"
-        android:fontFamily="@font/sf_pro_text_black"/>
+        android:fontFamily="@font/sf_pro_text_black"
+        android:textDirection="locale"/>
     <TextView
         android:layout_width="400dp"
         android:layout_height="wrap_content"
