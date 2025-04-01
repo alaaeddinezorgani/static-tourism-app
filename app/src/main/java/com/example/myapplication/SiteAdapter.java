@@ -1,10 +1,12 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -56,6 +58,23 @@ public class SiteAdapter extends BaseAdapter {
         siteImage.setImageResource(s.getImageRes());
         siteTitle.setText(s.getNameRes());
         siteSummary.setText(s.getSummaryRes());
+
+
+        Button shareButton = view.findViewById(R.id.site_fav_btn);
+        shareButton.setOnClickListener(v -> {
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("text/plain");
+            String name = context.getString(s.getNameRes());
+            String website = s.getWebsite();
+            String shareText = "Check out this amazing location: " + name + " on " + website;
+            shareIntent.putExtra(Intent.EXTRA_TEXT, shareText);
+
+            Intent chooser = Intent.createChooser(shareIntent, "Share via");
+            if (shareIntent.resolveActivity(context.getPackageManager()) != null) {
+                context.startActivity(chooser);
+            }
+        });
+
         return view;
     }
 

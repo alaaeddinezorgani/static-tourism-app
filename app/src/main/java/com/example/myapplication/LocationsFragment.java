@@ -116,6 +116,7 @@ public class LocationsFragment extends Fragment {
             }
         });
 
+
     }
 
     private void filterList(String text) {
