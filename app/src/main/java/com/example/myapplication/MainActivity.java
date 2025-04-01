@@ -1,6 +1,10 @@
 package com.example.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,6 +20,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.myapplication.databinding.ActivityMainBinding;
 
+import java.util.Locale;
+
 
 public class MainActivity extends AppCompatActivity{
     ActivityMainBinding binding;
@@ -29,6 +35,7 @@ public class MainActivity extends AppCompatActivity{
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         replaceFragment(new HomeFragment());
