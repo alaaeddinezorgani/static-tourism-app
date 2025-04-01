@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/big_description"
                 android:text="Credits:\nHAMACHE Abdelmalek\nLOUBAR Anes\nZORGANI Alaaeddine"
-                android:layout_marginLeft="220dp"
+                android:layout_marginStart="220dp"
                 android:layout_marginTop="40dp"
                 android:textStyle="italic|bold"
                 android:fontFamily="@font/sf_pro_text_bolditalic"
