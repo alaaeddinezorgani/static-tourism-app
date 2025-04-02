@@ -27,11 +27,11 @@
         android:layout_below="@id/site_img"
         android:textStyle="bold"
         android:textSize="20dp"
-        android:paddingStart="12dp"
+        android:paddingStart="20dp"
         android:paddingEnd="4dp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        android:fontFamily="@font/sf_pro_text_black"
+        style="@style/TitleText"
         android:textDirection="locale"/>
     <TextView
         android:layout_width="400dp"
@@ -39,7 +39,9 @@
         android:id="@+id/site_summary"
         android:text="Castle Skalicky in Silver Skalitz was the seat of Sir Radzig Kobyla, the Hetman of King Wenceslas IV of Bohemia. The main gate of the keep was situated near the forge of the village. "
         android:layout_below="@id/site_title"
-        android:paddingLeft="10dp"
+        android:layout_marginRight="20dp"
+        android:paddingLeft="20dp"
+        style="@style/BodyText"
         android:layout_marginBottom="15dp"/>
     <LinearLayout
         android:layout_width="wrap_content"
